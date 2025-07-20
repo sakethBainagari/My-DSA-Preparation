@@ -1,5 +1,5 @@
 import java.util.*;
-class sorting {
+class selectionSort {
     public static void print(int[] arr,int n){
          for(int i=0;i<n;i++){
             System.out.print(arr[i]+ " ");
