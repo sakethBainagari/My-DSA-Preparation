@@ -1,4 +1,5 @@
 import java.util.*;
+//using recursion
 class recursiveBubble {
     public static void print(int[] arr,int n){
          for(int i=0;i<n;i++){
