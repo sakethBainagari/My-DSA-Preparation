@@ -1,0 +1,38 @@
+
+import java.util.*;
+class numHashUsingHashmap {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int[] arr = new int[n];
+        for(int i=0;i<n;i++){
+            arr[i] = s.nextInt();
+        }
+        
+        Map<Integer,Integer> map = new HashMap<>();
+        for(int i=0;i<n;i++){
+            int key = arr[i];
+            int freq = 0;
+            if(map.containsKey(key)){
+                freq = map.get(key);    
+            } 
+            freq++;
+            map.put(key,freq);
+        }
+        // to iterate over map
+        for(Map.Entry<Integer, Integer> in : map.entrySet()){
+            System.out.println(in.getKey() + "->" + in.getValue());
+        }
+        
+        
+        int q = s.nextInt();
+        while(q-->0){
+            int num = s.nextInt();
+            if(map.containsKey(num)){
+                System.out.println(map.get(num));
+            }else{
+                System.out.println(0);
+            }
+        }
+    }
+}
