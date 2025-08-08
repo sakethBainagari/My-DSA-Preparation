@@ -8,7 +8,12 @@ class Solution {
                 count++;
             }
 
+
+
+
         }
+
+        
         if (nums[n -  1] > nums[0]) count++;
 
         return count <= 1;
